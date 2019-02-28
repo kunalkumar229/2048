@@ -11,10 +11,10 @@ node ('master'){
   }
    stage('run'){
      
-   //  sh 'docker run -d -p 8089:80 twenty48'
-    // sh 'docker stop '
-     //sh 'docker rmi twenty48'
-     //sh 'docker images'
+   sh 'docker run -d -p 8089:80 twenty48'
+     sh 'docker stop '
+     sh 'docker rmi twenty48'
+     sh 'docker images'
      sh 'docker ps'
    }
   
