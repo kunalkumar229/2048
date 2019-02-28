@@ -6,8 +6,13 @@ node ('master'){
   stage('list'){
    sh 'docker build -t twenty48 .'
     sh 'docker images'
-    sh 'docker rmi twenty48'
-    sh 'docker images'
    
   }
+   stage('run'){
+     
+     sh 'docker run -d -p 8089:80 twenty48'
+     sh 'docker rmi twenty48'
+     sh 'docker images'
+   }
+  
 }
