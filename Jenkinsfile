@@ -12,7 +12,7 @@ node ('master'){
    stage('run'){
      
    sh 'docker run -d -p 8088:80 twenty48'
-     sh 'docker stop '
+     sh 'docker stop jolly_pare'
      sh 'docker rmi twenty48'
      sh 'docker images'
      sh 'docker ps'
