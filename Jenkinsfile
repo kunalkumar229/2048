@@ -5,17 +5,17 @@ node ('master'){
     
     }
   stage('docker'){
-   sh 'docker build -t twenty48 .'
+   //sh 'docker build -t twenty48 .'
     sh 'docker images'
    
   }
    stage('run'){
      
-   sh 'docker run -d -p 8087:80 twenty48'
-     sh 'docker stop jolly_pare'
+   //sh 'docker run -d -p 8087:80 twenty48'
+     //sh 'docker stop jolly_pare'
      sh 'docker rmi twenty48'
      sh 'docker images'
-     sh 'docker ps'
+     //sh 'docker ps'
    }
   
 }
