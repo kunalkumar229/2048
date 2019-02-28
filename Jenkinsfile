@@ -5,6 +5,9 @@ node ('master'){
     }
   stage('list'){
    sh 'docker build -t twenty48 .'
+    sh 'docker images'
+    sh 'docker rmi twenty48'
+    sh 'docker images'
    
   }
 }
