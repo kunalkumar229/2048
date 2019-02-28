@@ -1,4 +1,5 @@
 node ('master'){
+  try {
   stage('check-out'){
     checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/kunalkumar229/2048.git']]])
     
@@ -16,5 +17,7 @@ node ('master'){
      //sh 'docker images'
      sh 'docker ps'
    }
-  
+  }catch (Exception e){
+    
+  }
 }
