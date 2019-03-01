@@ -9,13 +9,15 @@ node ('master'){
     sh 'docker images'
    
   }
-   stage('run'){
+   stage('push'){
      
+    sh 'docker push redskullk/test:twenty48'
+    
    //sh 'docker run -d -p 8087:80 twenty48'
-     //sh 'docker stop jolly_pare'
-     //sh 'docker rmi twenty48'
-     //sh 'docker images'
-     //sh 'docker ps'
+  
+    sh 'docker rmi twenty48'
+    sh 'docker images'
+    
    }
   
 }
