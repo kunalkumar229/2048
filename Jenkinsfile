@@ -11,6 +11,7 @@ node ('master'){
   }
    stage('push'){
      
+    sh 'docker login -u redskullk'
     sh 'docker tag twenty48 redskullk/test'
     sh 'docker push redskullk/test:twenty48'
     
