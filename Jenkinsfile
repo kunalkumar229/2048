@@ -5,7 +5,7 @@ node ('master'){
     
     }
   stage('docker'){
-   sh 'docker build -t twenty48 .'
+   sh 'docker build -t redskullk/test:twenty48'
     sh 'docker images'
    
   }
